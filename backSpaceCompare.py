@@ -16,7 +16,7 @@ def backspaceCompare(S: str, T: str) -> bool:
     while True:
         while len(T) != 0 and T[0] == '#':
             T = T[1:]
-
+    
         hashIdx = T.find('#')
 
         if(hashIdx == -1):
