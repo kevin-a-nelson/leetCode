@@ -22,4 +22,4 @@ def getHint(secret: str, guess: str) -> str:
     
     return f"{sameIdx}A{diffIdx}B"
 
-print(getHint("1807", "7810"))
+print(getHint("1807", 10))
