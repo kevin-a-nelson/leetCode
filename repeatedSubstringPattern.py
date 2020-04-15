@@ -23,3 +23,9 @@ def repeatedSubstringPattern(s: str) -> bool:
     return False
 
 print(repeatedSubstringPattern("bb"))
+
+"abaaabaa"
+
+[1:] = "baaabaa" + "abaaaba"
+
+print("bb" in "bb"[1:] + "bb"[:-1])
