@@ -38,18 +38,25 @@ class Solution:
                 for bikeY, bikesRow in enumerate(bikes):
                     for bikeX, bike in enumerate(bikesRow):
 
+                        if bikeY in takenBikes:
+                            continue
+
                         manhattenDistance = abs(workerX - bikeX) + abs(workerY - bikeY)
 
                         if(manhattenDistance < minDistance):
-                            workerBikeDistance['workerIdx'] = workerX
-                            workerBikeDistance['bikeIdx'] = bikeX
+                            workerBikeDistance['workerIdx'] = workerY
+                            workerBikeDistance['bikeIdx'] = bikeY
                             workerBikeDistance['manhattenDistance'] = manhattenDistance
 
 
             workerBikeDistances.append(workerBikeDistance)
-            print(workerBikeDistance)
-            # takenBikes.append(workerBikeDistance['bikeIdx'])
-        return workerBikeDistances
+            takenBikes.append(workerBikeDistance['bikeIdx'])
+
+            workerBikeDistances = sorted(workerBikeDistances, key = lambda workerBikeDistance: workerBikeDistance['bikeIdx'])
+
+        workerIdxs = list(map(lambda workerBikeDistance: workerBikeDistance['workerIdx'], workerBikeDistances))
+
+        return workerIdxs
 
 
 
