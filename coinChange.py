@@ -48,5 +48,8 @@ class Solution:
             return -1
         
         return steps[-1]
+
+        # O(N * S)
+        # O (S)
             
             
