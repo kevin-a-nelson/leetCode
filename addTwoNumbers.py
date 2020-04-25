@@ -25,3 +25,9 @@ class Solution:
         
         return head.next
     
+#    99
+#  + 99
+#------------
+#    
+
+# NICK WHITE
