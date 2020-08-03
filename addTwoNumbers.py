@@ -15,7 +15,6 @@ class Solution:
             sum = l1_val + l2_val + carry
             remainder = sum % 10
             carry = sum // 10
-            
             node.next = ListNode(remainder)
             
             node = node.next
