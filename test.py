@@ -1,9 +1,3 @@
-def func1():
-
-    def func2():
-        print(var)
-    
-    var = 10
-    func2()
-
-func1()
+for i in range(20):
+    if (i ** 3 % 2 == 1):
+        print(i, i ** 3)
